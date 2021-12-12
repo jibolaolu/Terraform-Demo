@@ -55,3 +55,19 @@ resource "azurerm_sql_database" "test" {
     environment = "production"
   }
 }
+
+  features {
+
+  }
+}
+
+provider "azurerm" {
+  features {
+    virtual_machine {
+      delete_os_disk_on_deletion = false
+    }
+  }
+  alias = "provider2-west"
+  #client_id = ""
+  #client_secret = ""
+}
