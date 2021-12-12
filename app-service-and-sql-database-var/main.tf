@@ -56,6 +56,7 @@ resource "azurerm_sql_database" "test" {
   }
 }
 
+provider "azurerm" {
   features {
 
   }
